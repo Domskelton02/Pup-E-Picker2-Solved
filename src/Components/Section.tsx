@@ -1,4 +1,6 @@
 import { ReactNode } from "react";
+import { useFavorite } from '../contexts/FavoriteContext';
+import { useLoading } from '../contexts/LoadingContext';
 
 export const Section = ({
   label,
@@ -8,6 +10,9 @@ export const Section = ({
   label: string;
   children: ReactNode;
 }) => {
+  const { favoriteCount } = useFavorite();
+  const { loading } = useLoading();
+
   return (
     <section id="main-section">
       <div className="container-header">
@@ -20,29 +25,11 @@ export const Section = ({
               alert("click favorited");
             }}
           >
-            favorited ( {0} )
+            favorited ( {favoriteCount} )
           </div>
-
-          {/* This should display the unfavorited count */}
-          <div
-            className={`selector ${""}`}
-            onClick={() => {
-              alert("click unfavorited");
-            }}
-          >
-            unfavorited ( {10} )
-          </div>
-          <div
-            className={`selector ${""}`}
-            onClick={() => {
-              alert("clicked create dog");
-            }}
-          >
-            create dog
-          </div>
+          {loading ? <div>Loading...</div> : children}
         </div>
       </div>
-      <div className="content-container">{children}</div>
     </section>
   );
 };

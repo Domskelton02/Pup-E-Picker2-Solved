@@ -1,11 +1,24 @@
-// Right now these dogs are constant, but in reality we should be getting these from our server
-// Todo: Refactor to get rid of props (THERE SHOULD BE NO PROPS DRILLING ON THIS COMPONENT)
-export const Dogs = () =>
-  // no props allowed
-  {
-    return (
-      //  the "<> </>"" are called react fragments, it's like adding all the html inside
-      // without adding an actual html element
-      <>{/* Make all the dog cards show up here */}</>
-    );
+import { useState, useEffect } from "react";
+import { DogCard } from "./DogCard";
+
+export const Dogs = () => {
+  const [dogs, setDogs] = useState([]);
+
+  useEffect(() => {
+    fetchDogs();
+  }, []);
+
+  const fetchDogs = async () => {
+    const response = await fetch("http://localhost:3000/dogs");
+    const dogs = await response.json();
+    setDogs(dogs);
   };
+
+  return (
+    <>
+      {dogs.map((dog) => (
+        <DogCard key={dog.id} dog={dog} />
+      ))}
+    </>
+  );
+};

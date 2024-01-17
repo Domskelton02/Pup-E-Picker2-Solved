@@ -1,14 +1,15 @@
-import { Section } from "./Components/Section";
+import { FavoriteProvider } from '../contexts/FavoriteContext';
+import { LoadingProvider } from '../contexts/LoadingContext';
+import App from './App';
 
-export function App() {
+const Root = () => {
   return (
-    <div className="App" style={{ backgroundColor: "skyblue" }}>
-      <header>
-        <h1>pup-e-picker (Functional)</h1>
-      </header>
-      <Section label={"Dogs: "}>
-
-      </Section>
-    </div>
+    <FavoriteProvider>
+      <LoadingProvider>
+        <App />
+      </LoadingProvider>
+    </FavoriteProvider>
   );
-}
+};
+
+export default Root;

@@ -1,35 +1,81 @@
 import { ReactNode } from "react";
-import { useFavorite } from '../contexts/FavoriteContext';
-import { useLoading } from '../contexts/LoadingContext';
+import { ActiveComponent } from "../types";
+import { useDogsContext } from "../Providers/DogsProvider";
 
 export const Section = ({
   label,
+  activeComponent,
+  setActiveComponent,
   children,
 }: {
-  // No more props than these two allowed
   label: string;
+  activeComponent: ActiveComponent;
+  setActiveComponent: (activeComponent: ActiveComponent) => void;
   children: ReactNode;
 }) => {
-  const { favoriteCount } = useFavorite();
-  const { loading } = useLoading();
+  const { favoritedDogs, unfavoritedDogs } = useDogsContext();
+
+  const toggleActiveComponent = (component: ActiveComponent) => {
+    if (component === activeComponent) {
+      setActiveComponent("all");
+    } else {
+      setActiveComponent(component);
+    }
+  };
+
+  const generateClassName = (
+    activeComponent: ActiveComponent,
+    currentComponent: ActiveComponent
+  ) => {
+    return activeComponent === currentComponent ? "active" : "";
+  };
+
+  const favoritedClassName = generateClassName(activeComponent, "favorited");
+  const unfavoritedClassName = generateClassName(
+    activeComponent,
+    "unfavorited"
+  );
+  const createDogFormClassName = generateClassName(
+    activeComponent,
+    "create-dog-form"
+  );
+
+  const favoritedCount = favoritedDogs.length;
+  const unfavoritedCount = unfavoritedDogs.length;
 
   return (
     <section id="main-section">
       <div className="container-header">
         <div className="container-label">{label}</div>
         <div className="selectors">
-          {/* This should display the favorited count */}
           <div
-            className={`selector ${"active"}`}
+            className={`selector ${favoritedClassName}`}
             onClick={() => {
-              alert("click favorited");
+              toggleActiveComponent("favorited");
             }}
           >
-            favorited ( {favoriteCount} )
+            favorited ( {favoritedCount} )
           </div>
-          {loading ? <div>Loading...</div> : children}
+
+          <div
+            className={`selector ${unfavoritedClassName}`}
+            onClick={() => {
+              toggleActiveComponent("unfavorited");
+            }}
+          >
+            unfavorited ( {unfavoritedCount} )
+          </div>
+          <div
+            className={`selector ${createDogFormClassName}`}
+            onClick={() => {
+              toggleActiveComponent("create-dog-form");
+            }}
+          >
+            create dog
+          </div>
         </div>
       </div>
+      <div className="content-container">{children}</div>
     </section>
   );
 };

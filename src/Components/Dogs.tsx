@@ -1,24 +1,56 @@
-import { useState, useEffect } from "react";
+import { ActiveComponent, Dog } from "../types";
 import { DogCard } from "./DogCard";
+import { useDogsContext } from "../Providers/DogsProvider";
 
-export const Dogs = () => {
-  const [dogs, setDogs] = useState([]);
+export const Dogs = ({
+  activeComponent,
+}: {
+  activeComponent: ActiveComponent;
+}) => {
+  const {
+    allDogs,
+    deleteDog,
+    updateDogIsFavorite,
+    favoritedDogs,
+    unfavoritedDogs,
+    isLoading,
+  } = useDogsContext();
 
-  useEffect(() => {
-    fetchDogs();
-  }, []);
-
-  const fetchDogs = async () => {
-    const response = await fetch("http://localhost:3000/dogs");
-    const dogs = await response.json();
-    setDogs(dogs);
+  const determineDogArray = (): Dog[] => {
+    switch (activeComponent) {
+      case "all":
+        return allDogs;
+      case "favorited":
+        return favoritedDogs;
+      case "unfavorited":
+        return unfavoritedDogs;
+      case "create-dog-form":
+        return [];
+    }
   };
+
+  const dogArray = determineDogArray();
 
   return (
     <>
-      {dogs.map((dog) => (
-        <DogCard key={dog.id} dog={dog} />
-      ))}
+      {dogArray.map((dog) => {
+        return (
+          <DogCard
+            dog={dog}
+            key={dog.id}
+            onTrashIconClick={() => {
+              deleteDog(dog);
+            }}
+            onHeartClick={() => {
+              updateDogIsFavorite(dog, false);
+            }}
+            onEmptyHeartClick={() => {
+              updateDogIsFavorite(dog, true);
+            }}
+            isLoading={isLoading}
+          />
+        );
+      })}
     </>
   );
 };

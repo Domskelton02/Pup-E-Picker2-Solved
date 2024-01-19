@@ -1,1 +1,137 @@
-{"dogs":[{"name":"Carmela","image":"/assets/blue-heeler.png","description":"Directives Diesel Bronze Branding enhance","isFavorite":false,"id":0},{"name":"Ned","image":"/assets/chihuahua.avif","description":"white bandwidth black East Iridium Diesel Pants reinvent","isFavorite":true,"id":1},{"name":"Agnes","image":"/assets/chihuahua.avif","description":"capitalism Indiana culpo Automotive JSON tan opposite Kids","isFavorite":false,"id":2},{"name":"Joan","image":"/assets/corgi.png","description":"till Liaison Administrator Developer Diesel Bentley Brazil hyphenate","isFavorite":false,"id":3},{"name":"Lew","image":"/assets/chihuahua.avif","description":"magenta Optimized Southwest green Chips Account Global drive","isFavorite":true,"id":4},{"name":"Paige","image":"/assets/cowardly.png","description":"Southeast Usability system Generic Licensed partner Fresh","isFavorite":false,"id":5},{"name":"Zena","image":"/assets/blue-heeler.png","description":"Northwest Global female badge protocol Road sursum Californium","isFavorite":false,"id":6},{"name":"Chyna","image":"/assets/dalmation.png","description":"Soft Gasoline Incredible Liaison Bangladesh","isFavorite":false,"id":7},{"name":"Kailey","image":"/assets/dalmation.png","description":"shop Agent Strategist Tasty Netherlands","isFavorite":false,"id":8},{"name":"Trudie","image":"/assets/cowardly.png","description":"Loan Bicycle global Incredible Northwest ivory Synchronised","isFavorite":true,"id":9},{"name":"Zack","image":"/assets/chihuahua.avif","description":"East Investment Northeast systemic Volvo","isFavorite":true,"id":10},{"name":"Stewart","image":"/assets/boxer.png","description":"Street IB admoveo Clwyd Lamborghini","isFavorite":false,"id":11},{"name":"Jamaal","image":"/assets/dalmation.png","description":"Hybrid dedecor past Copper Bike","isFavorite":true,"id":12},{"name":"Adrienne","image":"/assets/chihuahua.avif","description":"North quantifying Neck Investor feed TLS World","isFavorite":false,"id":13},{"name":"Corine","image":"/assets/dalmation.png","description":"cornu ick South nicely West North County topsail","isFavorite":false,"id":14},{"name":"Mariela","image":"/assets/boxer.png","description":"yellow female Morocco deposit generate","isFavorite":true,"id":15},{"name":"Fausto","image":"/assets/boxer.png","description":"Krypton Surrey Electric Cab Reunion Copernicium Sao input","isFavorite":true,"id":16},{"name":"Joel","image":"/assets/blue-heeler.png","description":"maroon South Outdoors redound Southwest sky grey Sedan","isFavorite":false,"id":17},{"name":"Doug","image":"/assets/chihuahua.avif","description":"Optimization conclude Convertible calculating upward logistical Agender","isFavorite":true,"id":18},{"name":"Lennie","image":"/assets/dalmation.png","description":"Willow hence alongside Specialist success","isFavorite":true,"id":19}]}
+{
+  "dogs": [
+    {
+      "name": "Carmela",
+      "image": "/assets/blue-heeler.png",
+      "description": "Directives Diesel Bronze Branding enhance",
+      "isFavorite": true,
+      "id": 0
+    },
+    {
+      "name": "Ned",
+      "image": "/assets/chihuahua.avif",
+      "description": "white bandwidth black East Iridium Diesel Pants reinvent",
+      "isFavorite": true,
+      "id": 1
+    },
+    {
+      "name": "Agnes",
+      "image": "/assets/chihuahua.avif",
+      "description": "capitalism Indiana culpo Automotive JSON tan opposite Kids",
+      "isFavorite": true,
+      "id": 2
+    },
+    {
+      "name": "Joan",
+      "image": "/assets/corgi.png",
+      "description": "till Liaison Administrator Developer Diesel Bentley Brazil hyphenate",
+      "isFavorite": true,
+      "id": 3
+    },
+    {
+      "name": "Lew",
+      "image": "/assets/chihuahua.avif",
+      "description": "magenta Optimized Southwest green Chips Account Global drive",
+      "isFavorite": true,
+      "id": 4
+    },
+    {
+      "name": "Paige",
+      "image": "/assets/cowardly.png",
+      "description": "Southeast Usability system Generic Licensed partner Fresh",
+      "isFavorite": true,
+      "id": 5
+    },
+    {
+      "name": "Zena",
+      "image": "/assets/blue-heeler.png",
+      "description": "Northwest Global female badge protocol Road sursum Californium",
+      "isFavorite": true,
+      "id": 6
+    },
+    {
+      "name": "Chyna",
+      "image": "/assets/dalmation.png",
+      "description": "Soft Gasoline Incredible Liaison Bangladesh",
+      "isFavorite": false,
+      "id": 7
+    },
+    {
+      "name": "Trudie",
+      "image": "/assets/cowardly.png",
+      "description": "Loan Bicycle global Incredible Northwest ivory Synchronised",
+      "isFavorite": false,
+      "id": 9
+    },
+    {
+      "name": "Zack",
+      "image": "/assets/chihuahua.avif",
+      "description": "East Investment Northeast systemic Volvo",
+      "isFavorite": true,
+      "id": 10
+    },
+    {
+      "name": "Stewart",
+      "image": "/assets/boxer.png",
+      "description": "Street IB admoveo Clwyd Lamborghini",
+      "isFavorite": false,
+      "id": 11
+    },
+    {
+      "name": "Jamaal",
+      "image": "/assets/dalmation.png",
+      "description": "Hybrid dedecor past Copper Bike",
+      "isFavorite": true,
+      "id": 12
+    },
+    {
+      "name": "Adrienne",
+      "image": "/assets/chihuahua.avif",
+      "description": "North quantifying Neck Investor feed TLS World",
+      "isFavorite": false,
+      "id": 13
+    },
+    {
+      "name": "Corine",
+      "image": "/assets/dalmation.png",
+      "description": "cornu ick South nicely West North County topsail",
+      "isFavorite": false,
+      "id": 14
+    },
+    {
+      "name": "Mariela",
+      "image": "/assets/boxer.png",
+      "description": "yellow female Morocco deposit generate",
+      "isFavorite": true,
+      "id": 15
+    },
+    {
+      "name": "Fausto",
+      "image": "/assets/boxer.png",
+      "description": "Krypton Surrey Electric Cab Reunion Copernicium Sao input",
+      "isFavorite": true,
+      "id": 16
+    },
+    {
+      "name": "Joel",
+      "image": "/assets/blue-heeler.png",
+      "description": "maroon South Outdoors redound Southwest sky grey Sedan",
+      "isFavorite": false,
+      "id": 17
+    },
+    {
+      "name": "Doug",
+      "image": "/assets/chihuahua.avif",
+      "description": "Optimization conclude Convertible calculating upward logistical Agender",
+      "isFavorite": true,
+      "id": 18
+    },
+    {
+      "name": "Lennie",
+      "image": "/assets/dalmation.png",
+      "description": "Willow hence alongside Specialist success",
+      "isFavorite": true,
+      "id": 19
+    }
+  ]
+}
